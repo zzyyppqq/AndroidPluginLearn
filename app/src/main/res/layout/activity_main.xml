@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.zyp.demo.MainActivity">
 
     <Button
         android:id="@+id/btn_reflection"
@@ -21,21 +21,21 @@
         android:text="unregister activity"/>
 
     <Button
-        android:id="@+id/btn_plugin_activity"
+        android:id="@+id/btn_plugin_activity_by_hook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="plugin activity"/>
+        android:text="plugin activity(Hook)"/>
 
     <Button
-        android:id="@+id/btn_leak_service"
+        android:id="@+id/btn_plugin_activity_by_interface"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="leak service" />
+        android:text="plugin activity(Interface)"/>
 
     <Button
-        android:id="@+id/btn_leak_activity"
+        android:id="@+id/btn_plugin_activity_by_reflection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="leak Activity"/>
+        android:text="plugin activity(Reflection)"/>
 
 </LinearLayout>

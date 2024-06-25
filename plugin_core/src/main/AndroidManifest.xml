@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <!-- 占坑的Activity -->
+        <activity android:name="com.zyp.plugin.core.activity.ProxyActivity"></activity>
+
+        <activity android:name=".activity.reflect.StubReflectActivity"/>
+        <activity android:name=".activity.ainterface.StubInterfaceActivity"/>
+    </application>
+</manifest>

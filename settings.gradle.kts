@@ -30,4 +30,5 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidReflectionLearn"
 include(":app")
 include(":java_lib")
-include(":plugin")
+include(":plugin_apk")
+include(":plugin_core")

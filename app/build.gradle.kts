@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.zyp.reflection"
+    namespace = "com.zyp.plugin.demo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.zyp.reflection"
+        applicationId = "com.zyp.plugin.demo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -46,4 +46,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation(project(":plugin_core"))
 }

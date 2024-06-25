@@ -13,11 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidReflectionLearn"
         tools:targetApi="31">
-        <!-- 占坑的Activity -->
-        <activity android:name=".plugin.ProxyActivity"></activity>
-        <activity
-            android:name=".leak.LeakActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,9 +24,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".leak.LeakingService"
-            android:exported="false" />
     </application>
 
 </manifest>
