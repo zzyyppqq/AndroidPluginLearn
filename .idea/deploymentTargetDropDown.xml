@@ -5,10 +5,16 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="host">
+        <State />
+      </entry>
       <entry key="plugin">
         <State />
       </entry>
       <entry key="plugin_apk">
+        <State />
+      </entry>
+      <entry key="reflection_sample">
         <State />
       </entry>
     </value>

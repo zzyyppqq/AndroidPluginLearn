@@ -9,10 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/java_lib" />
+            <option value="$PROJECT_DIR$/host" />
             <option value="$PROJECT_DIR$/plugin_apk" />
             <option value="$PROJECT_DIR$/plugin_core" />
+            <option value="$PROJECT_DIR$/reflection_java" />
+            <option value="$PROJECT_DIR$/reflection_sample" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

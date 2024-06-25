@@ -27,8 +27,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidReflectionLearn"
-include(":app")
-include(":java_lib")
+rootProject.name = "AndroidPluginLearn"
+include(":host")
+include(":reflection_java")
 include(":plugin_apk")
 include(":plugin_core")
+include(":reflection_sample")

@@ -4,7 +4,7 @@
     <application>
 
         <!-- 占坑的Activity -->
-        <activity android:name="com.zyp.plugin.core.activity.ProxyActivity"></activity>
+        <activity android:name="com.zyp.host.core.activity.ProxyActivity"></activity>
 
         <activity android:name=".activity.reflect.StubReflectActivity"/>
         <activity android:name=".activity.ainterface.StubInterfaceActivity"/>

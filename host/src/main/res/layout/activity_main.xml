@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zyp.host.demo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_unregister_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unregister activity"/>
+
+    <Button
+        android:id="@+id/btn_plugin_activity_by_hook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="plugin activity(Hook)"/>
+
+    <Button
+        android:id="@+id/btn_plugin_activity_by_interface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="plugin activity(Interface)"/>
+
+    <Button
+        android:id="@+id/btn_plugin_activity_by_reflection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="plugin activity(Reflection)"/>
+
+</LinearLayout>
