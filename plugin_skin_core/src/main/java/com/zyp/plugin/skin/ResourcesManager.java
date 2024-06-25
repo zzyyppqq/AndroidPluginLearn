@@ -1,6 +1,7 @@
 package com.zyp.plugin.skin;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.content.res.ColorStateList;
@@ -44,14 +45,17 @@ public class ResourcesManager {
     }
 
     public void init(Context context,String skinPath){
+        Log.i("ZYPP", "skinPath: " + skinPath);
         try {
             AssetManager assetManager = AssetManager.class.newInstance();
             //添加资源目录
             Method addAssetPath = AssetManager.class.getDeclaredMethod("addAssetPath",String.class);
             addAssetPath.invoke(assetManager,skinPath);
             mSkinResource = new Resources(assetManager,new DisplayMetrics(),new Configuration());
+            // 也可以使用 packageManager.getPackageArchiveInfo() 获取mSkinResource
+            //mSkinResource = loadPluginResources(context, skinPath);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("ZYPP", Log.getStackTraceString(e));
             mSkinResource = null;
         }
         mOriginalResource = context.getApplicationContext().getResources();
@@ -60,6 +64,31 @@ public class ResourcesManager {
         ).packageName;
         originalPackageName = context.getPackageName();
         Log.i("ZYPP", "skinPackageName: " + skinPackageName + ", originalPackageName: " + originalPackageName);
+    }
+
+
+    public Resources loadPluginResources(Context context, String apkPath) {
+        PackageManager packageManager = context.getApplicationContext().getPackageManager();
+        PackageInfo packageArchiveInfo = packageManager.getPackageArchiveInfo(
+                apkPath, PackageManager.GET_ACTIVITIES |
+                        PackageManager.GET_META_DATA |
+                        PackageManager.GET_SERVICES |
+                        PackageManager.GET_PROVIDERS
+                        // | PackageManager.GET_SIGNATURES
+        );
+        if (packageArchiveInfo == null || packageArchiveInfo.applicationInfo == null) {
+            Log.i("ZYPP", "packageArchiveInfo: " + packageArchiveInfo);
+            return null;
+        }
+        packageArchiveInfo.applicationInfo.sourceDir = apkPath;
+        packageArchiveInfo.applicationInfo.publicSourceDir = apkPath;
+        Resources pluginResources = null;
+        try {
+            pluginResources = packageManager.getResourcesForApplication(packageArchiveInfo.applicationInfo);
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.e("ZYPP", "failed to create inject resources");
+        }
+        return pluginResources;
     }
 
     public void init(Context context){
@@ -125,6 +154,7 @@ public class ResourcesManager {
         if(!original){
             try {
                 int resId = mSkinResource.getIdentifier(resName, "color", skinPackageName);
+                Log.i("ZYPP", "getColorByName0 mSkinResource: " + mSkinResource +", resName: " + resName);
                 ColorStateList color = mSkinResource.getColorStateList(resId);
                 return color;
             }catch (Exception e){
@@ -134,6 +164,7 @@ public class ResourcesManager {
         }else{
             try {
                 int resId = mOriginalResource.getIdentifier(resName, "color", originalPackageName);
+                Log.i("ZYPP", "getColorByName1 resId: " + resId + ", resName: " + resName);
                 ColorStateList color = mOriginalResource.getColorStateList(resId);
                 return color;
             }catch (Exception e){
