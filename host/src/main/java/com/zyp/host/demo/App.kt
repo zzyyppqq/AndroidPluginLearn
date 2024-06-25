@@ -2,6 +2,7 @@ package com.zyp.host.demo
 
 import android.app.Application
 import com.zyp.plugin.core.PluginInstall
+import com.zyp.plugin.skin.SkinInstaller
 
 class App : Application() {
 
@@ -14,6 +15,8 @@ class App : Application() {
             UnRegisterActivity::class.java.name,
         )
         PluginInstall.init(this, whiteList)
+
+        SkinInstaller.init(this)
     }
 
     companion object {

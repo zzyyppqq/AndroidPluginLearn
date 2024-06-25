@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.zyp.host.demo.skin.SkinHelper
 import com.zyp.plugin.core.PluginInstall.pluginActivityName
 import com.zyp.plugin.core.PluginInstall.pluginClassLoader
 import com.zyp.plugin.core.PluginInstall.pluginPath
@@ -17,9 +18,9 @@ import com.zyp.plugin.core.activity.ainterface.StubInterfaceActivity
 import com.zyp.plugin.core.activity.reflect.StubReflectActivity
 import com.zyp.plugin.core.broadcast.BroadcastUtils
 import com.zyp.plugin.core.service.StubService
+import com.zyp.plugin.skin.BaseSkinActivity
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : BaseSkinActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,6 +96,16 @@ class MainActivity : AppCompatActivity() {
             val res = cursor?.columnNames
             Log.d("TAG","provider query res: ${res.contentToString()}")
         }
+
+
+        findViewById<Button>(R.id.btn_plugin_skin).setOnClickListener {
+            SkinHelper.skin("plugin_skin.skin")
+        }
+
+        findViewById<Button>(R.id.btn_plugin_skin_reset).setOnClickListener {
+            SkinHelper.skinReset()
+        }
+
     }
 
 }

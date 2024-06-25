@@ -47,4 +47,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(":plugin_core"))
+    implementation(project(":plugin_skin_core"))
 }
