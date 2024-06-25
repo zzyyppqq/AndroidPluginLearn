@@ -134,7 +134,11 @@ public class HookInstrumentation extends Instrumentation {
         super.callActivityOnCreate(activity, icicle);
     }
 
-    //替换资源
+    /**
+     * 替换资源
+     * 遇到的坑：插件布局文件中ImageView的src资源问题
+     * 原因：因为ImageView是通过getTheme去查找的资源所以需要替换掉
+     */
     private void injectActivityResources(Activity activity) {
         Log.i("ZYPP", "HookInstrumentation injectActivityResources");
         Context base = activity.getBaseContext();

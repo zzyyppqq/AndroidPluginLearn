@@ -9,11 +9,11 @@ import java.io.File
 
 object PluginInstall {
 
-    private lateinit var pluginClassLoader: DexClassLoader
+    lateinit var pluginClassLoader: DexClassLoader
 
-    open lateinit var pluginPath: String
+    lateinit var pluginPath: String
 
-    open lateinit var pluginActivityName: String
+    lateinit var pluginActivityName: String
 
     /**
      *  加载插件

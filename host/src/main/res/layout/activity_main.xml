@@ -8,28 +8,108 @@
     android:orientation="vertical"
     tools:context="com.zyp.host.demo.MainActivity">
 
-    <Button
-        android:id="@+id/btn_unregister_activity"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="unregister activity"/>
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_round_area"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_plugin_activity_by_hook"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btn_unregister_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="unregister activity" />
+
+        <Button
+            android:id="@+id/btn_plugin_activity_by_hook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin activity(Hook)" />
+
+        <Button
+            android:id="@+id/btn_plugin_activity_by_interface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin activity(Interface)" />
+
+        <Button
+            android:id="@+id/btn_plugin_activity_by_reflection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin activity(Reflection)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="plugin activity(Hook)"/>
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_area"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_plugin_activity_by_interface"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btn_plugin_start_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin start service" />
+
+        <Button
+            android:id="@+id/btn_plugin_stop_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin stop service" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="plugin activity(Interface)"/>
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_area"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_plugin_activity_by_reflection"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btn_plugin_broadcast_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin broadcast register" />
+
+
+        <Button
+            android:id="@+id/btn_plugin_broadcast_unregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin broadcast unregister" />
+
+        <Button
+            android:id="@+id/btn_plugin_send_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin send broadcast" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="plugin activity(Reflection)"/>
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_area"
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btn_plugin_query_provider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin query provider" />
+
+        <Button
+            android:id="@+id/btn_plugin_query_provider2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plugin query provider2" />
+    </LinearLayout>
 </LinearLayout>

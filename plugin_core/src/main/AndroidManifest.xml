@@ -7,6 +7,13 @@
         <activity android:name=".activity.ProxyActivity"></activity>
 
         <activity android:name=".activity.reflect.StubReflectActivity"/>
+
         <activity android:name=".activity.ainterface.StubInterfaceActivity"/>
+
+        <service android:name=".service.StubService" />
+
+        <provider
+            android:authorities="com.zyp.stubprovider"
+            android:name=".contentprovider.StubContentProvider" />
     </application>
 </manifest>
