@@ -3,9 +3,7 @@ package com.zyp.reflection.sample.util;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
-
-import com.zyp.host.core.activity.ProxyActivity;
-
+import com.zyp.reflection.sample.activity.ProxyActivity;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

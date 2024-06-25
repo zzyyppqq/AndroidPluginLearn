@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <application>
+    <application android:theme="@style/Theme.AndroidPluginLearn">
 
         <!-- 占坑的Activity -->
-        <activity android:name=".activity.ProxyActivity"></activity>
+        <activity android:name=".activity.ProxyActivity"/>
 
         <activity android:name=".activity.reflect.StubReflectActivity"/>
 

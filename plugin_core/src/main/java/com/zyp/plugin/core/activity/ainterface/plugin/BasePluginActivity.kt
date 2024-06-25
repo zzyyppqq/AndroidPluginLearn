@@ -8,7 +8,7 @@ import android.view.View
 
 open class BasePluginActivity : Activity(), IPluginActivity {
     /**
-     * 若proxyActivity为null，则按照普通Activity处理生命周期，否值
+     * 若proxyActivity为null，则按照普通Activity处理生命周期
      */
     var proxyActivity: Activity? = null
 

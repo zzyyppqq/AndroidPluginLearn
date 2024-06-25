@@ -61,12 +61,14 @@ public class HookInstrumentation extends Instrumentation {
             Field currentActivityThreadField = clazz.getDeclaredField("sCurrentActivityThread");
             currentActivityThreadField.setAccessible(true);
             Object currentActivityThread = currentActivityThreadField.get(null);
+            Log.i("ZYPP", "HookInstrumentation currentActivityThread: " + currentActivityThread);
             // 1.2获取Activity的mInstrumentation并替换成我们自己的
             Field instrumentationField = clazz.getDeclaredField("mInstrumentation");
             instrumentationField.setAccessible(true);
             Instrumentation old = (Instrumentation) instrumentationField.get(currentActivityThread);
             HookInstrumentation hookInstrumentation = new HookInstrumentation(realContext,old, pluginContext);
             instrumentationField.set(currentActivityThread, hookInstrumentation);
+            Log.i("ZYPP", "HookInstrumentation hook sucess");
             return hookInstrumentation;
         } catch (Throwable e) {
             Log.e("ZYPP", Log.getStackTraceString(e));

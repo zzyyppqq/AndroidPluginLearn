@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidReflectionLearn">
+        android:theme="@style/Theme.AndroidPluginLearn">
         <activity
             android:name=".PluginActivity"
             android:exported="true">
