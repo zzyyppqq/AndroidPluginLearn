@@ -1,6 +1,7 @@
 package com.zyp.host.demo.skin
 
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import com.zyp.host.demo.MainActivity
 import com.zyp.host.demo.app
@@ -19,7 +20,7 @@ object SkinHelper {
             return
         }
         val skinPath = File(app().cacheDir, name).absolutePath
-
+        Log.i("ZYPP", "skinPath: $skinPath")
         // 换肤
         SkinManager.getInstance().loadSkin(skinPath)
     }

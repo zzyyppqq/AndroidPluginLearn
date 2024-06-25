@@ -3,6 +3,7 @@ package com.zyp.plugin.skin;
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.collection.ArrayMap;
 
@@ -60,6 +61,7 @@ public class SkinManager {
         this.context = context;
         SkinSPUtils.getInstance().init(context); //初始化SkinSPUtils
         String skinPath = SkinSPUtils.getInstance().getSkinPath();
+        Log.i("ZYPP", "skinPath: " + skinPath);
         if (!TextUtils.isEmpty(skinPath))
             ResourcesManager.getInstance().init(context,skinPath);
         else
@@ -92,11 +94,11 @@ public class SkinManager {
      * 加载资源文件
      */
     public void loadSkin(String skinPath) {
-
         String currentSkinPath = SkinSPUtils.getInstance().getSkinPath();
-        if(TextUtils.equals(currentSkinPath,skinPath))
+        if(TextUtils.equals(currentSkinPath,skinPath)) {
+            Log.i("ZYPP", "same return");
             return;
-
+        }
         //下载到的资源文件,下载到用户没法删除的目录下
         ResourcesManager.getInstance().init(context, skinPath);
         SkinSPUtils.getInstance().saveSkinPath(skinPath);
