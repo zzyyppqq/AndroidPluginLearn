@@ -9,13 +9,19 @@ object PluginInstall {
 
     private lateinit var pluginClassLoader: DexClassLoader
 
+    open lateinit var pluginPath: String
+
+    open lateinit var pluginActivityName: String
+
     /**
      *  加载插件
      */
     fun init(context: Context) {
         extractPlugin(context)
 
-        var pluginPath = File(context.filesDir.absolutePath, "plugin.apk").absolutePath
+        pluginPath = File(context.filesDir.absolutePath, "plugin.apk").absolutePath
+
+        pluginActivityName = "com.zyp.plugin.PluginActivity"
 
         //这步不需要，直接在hookInstrumentation中用pluginClassloader生成插件类，不然会起冲突。
 //        var loadPluginDexManager = LoadPluginDexManager(this)

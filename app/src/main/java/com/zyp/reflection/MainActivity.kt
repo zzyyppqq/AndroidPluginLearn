@@ -1,5 +1,6 @@
 package com.zyp.reflection
 
+import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,13 +9,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.zyp.reflection.hook.PluginInstall
+import com.zyp.reflection.hook.PluginInstall.pluginActivityName
 import com.zyp.reflection.leak.LeakActivity
 import com.zyp.reflection.leak.LeakingService
 import com.zyp.reflection.plugin.UnRegisterActivity
 import com.zyp.reflection.statictest.StaticReflectionTest
+import java.io.File
 import java.lang.reflect.Field
 
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +45,12 @@ class MainActivity : AppCompatActivity() {
                 putExtra("info","传递过来的消息--MainActivity")
             })
         }
-
+        findViewById<Button>(R.id.btn_plugin_activity).setOnClickListener {
+            var intent = Intent().apply {
+                component = ComponentName("com.zyp.plugin", pluginActivityName)
+            }
+            startActivity(intent)
+        }
         findViewById<Button>(R.id.btn_leak_activity).setOnClickListener {
             startActivity(Intent(this@MainActivity, LeakActivity::class.java))
         }

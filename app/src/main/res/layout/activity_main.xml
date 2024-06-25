@@ -18,7 +18,13 @@
         android:id="@+id/btn_unregister_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="unregister Activity"/>
+        android:text="unregister activity"/>
+
+    <Button
+        android:id="@+id/btn_plugin_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="plugin activity"/>
 
     <Button
         android:id="@+id/btn_leak_service"
