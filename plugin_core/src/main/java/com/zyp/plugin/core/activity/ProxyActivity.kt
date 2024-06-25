@@ -1,8 +1,8 @@
-package com.zyp.host.core.activity
+package com.zyp.plugin.core.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.zyp.host.core.R
+import com.zyp.plugin.core.R
 
 /**
  * |---------------------------------------------------------------------------------------------------------------|

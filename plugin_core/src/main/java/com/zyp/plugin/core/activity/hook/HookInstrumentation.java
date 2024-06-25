@@ -1,4 +1,4 @@
-package com.zyp.host.core.activity.hook;
+package com.zyp.plugin.core.activity.hook;
 
 import android.app.Activity;
 import android.app.Instrumentation;
@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.zyp.host.core.activity.ProxyActivity;
+import com.zyp.plugin.core.activity.ProxyActivity;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

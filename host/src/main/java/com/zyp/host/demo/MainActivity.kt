@@ -8,10 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.zyp.host.core.activity.reflect.StubReflectActivity
-import com.zyp.host.core.PluginInstall.pluginActivityName
-import com.zyp.host.core.PluginInstall.pluginPath
-import com.zyp.host.core.activity.ainterface.StubInterfaceActivity
+import com.zyp.plugin.core.activity.reflect.StubReflectActivity
+import com.zyp.plugin.core.PluginInstall.pluginActivityName
+import com.zyp.plugin.core.PluginInstall.pluginPath
+import com.zyp.plugin.core.activity.ainterface.StubInterfaceActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        //MyInstrumentationTest.test()
 
         initListener()
     }

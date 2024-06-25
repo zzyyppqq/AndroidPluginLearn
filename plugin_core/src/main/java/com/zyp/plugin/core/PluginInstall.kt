@@ -1,9 +1,9 @@
-package com.zyp.host.core
+package com.zyp.plugin.core
 
 import android.app.Application
 import android.content.Context
-import com.zyp.host.core.activity.hook.HookInstrumentation
-import com.zyp.host.core.activity.hook.PluginContext
+import com.zyp.plugin.core.activity.hook.HookInstrumentation
+import com.zyp.plugin.core.activity.hook.PluginContext
 import dalvik.system.DexClassLoader
 import java.io.File
 

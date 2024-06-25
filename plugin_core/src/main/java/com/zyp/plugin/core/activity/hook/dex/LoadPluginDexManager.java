@@ -1,4 +1,4 @@
-package com.zyp.host.core.activity.hook.dex;
+package com.zyp.plugin.core.activity.hook.dex;
 
 import android.content.Context;
 

@@ -1,10 +1,10 @@
-package com.zyp.host.core.activity.ainterface.base
+package com.zyp.plugin.core.activity.ainterface.base
 
 import android.content.res.AssetManager
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.zyp.host.core.activity.hook.Reflect
+import com.zyp.plugin.core.activity.hook.Reflect
 import dalvik.system.DexClassLoader
 import java.io.File
 

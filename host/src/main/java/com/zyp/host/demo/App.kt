@@ -1,7 +1,7 @@
 package com.zyp.host.demo
 
 import android.app.Application
-import com.zyp.host.core.PluginInstall
+import com.zyp.plugin.core.PluginInstall
 
 class App : Application() {
 

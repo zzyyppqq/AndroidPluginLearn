@@ -1,4 +1,4 @@
-package com.zyp.host
+package com.zyp.plugin
 
 import android.app.Service
 import android.content.Intent

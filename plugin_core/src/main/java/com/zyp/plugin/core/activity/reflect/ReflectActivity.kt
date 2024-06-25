@@ -1,8 +1,8 @@
-package com.zyp.host.core.activity.reflect
+package com.zyp.plugin.core.activity.reflect
 
 import android.app.Activity
 import android.os.Bundle
-import com.zyp.host.core.activity.hook.Reflect
+import com.zyp.plugin.core.activity.hook.Reflect
 import java.lang.reflect.Method
 
 class ReflectActivity(activityClazz: String, activityClassLoader: ClassLoader?) {

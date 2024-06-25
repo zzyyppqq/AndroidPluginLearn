@@ -1,4 +1,4 @@
-package com.zyp.host.core.activity.ainterface.plugin
+package com.zyp.plugin.core.activity.ainterface.plugin
 
 import android.app.Activity
 import android.os.Bundle

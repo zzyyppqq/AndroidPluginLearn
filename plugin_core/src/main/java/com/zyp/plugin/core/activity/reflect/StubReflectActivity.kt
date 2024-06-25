@@ -1,9 +1,9 @@
-package com.zyp.host.core.activity.reflect
+package com.zyp.plugin.core.activity.reflect
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.zyp.host.core.activity.ainterface.base.StubBaseActivity
+import com.zyp.plugin.core.activity.ainterface.base.StubBaseActivity
 
 class StubReflectActivity : StubBaseActivity() {
     private var reflectActivity: ReflectActivity? = null

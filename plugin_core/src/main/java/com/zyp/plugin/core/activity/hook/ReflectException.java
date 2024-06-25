@@ -1,4 +1,4 @@
-package com.zyp.host.core.activity.hook;
+package com.zyp.plugin.core.activity.hook;
 
 /**
  * @author Lody

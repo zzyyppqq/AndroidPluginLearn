@@ -1,11 +1,11 @@
-package com.zyp.host.core.activity.ainterface
+package com.zyp.plugin.core.activity.ainterface
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.zyp.host.core.activity.hook.Reflect
-import com.zyp.host.core.activity.ainterface.base.StubBaseActivity
-import com.zyp.host.core.activity.ainterface.plugin.IPluginActivity
+import com.zyp.plugin.core.activity.hook.Reflect
+import com.zyp.plugin.core.activity.ainterface.base.StubBaseActivity
+import com.zyp.plugin.core.activity.ainterface.plugin.IPluginActivity
 
 class StubInterfaceActivity : StubBaseActivity() {
     private var activity: IPluginActivity? = null

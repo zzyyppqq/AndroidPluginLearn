@@ -1,4 +1,4 @@
-package com.zyp.host.core.activity.ainterface.plugin
+package com.zyp.plugin.core.activity.ainterface.plugin
 
 import android.app.Activity
 import android.content.res.Resources
@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 
 open class BasePluginActivity : Activity(), IPluginActivity {
+    /**
+     * 若proxyActivity为null，则按照普通Activity处理生命周期，否值
+     */
     var proxyActivity: Activity? = null
 
     override fun attach(proxyActivity: Activity) {
